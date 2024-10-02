@@ -22,7 +22,7 @@ const initialState: ProductsState = {
 };
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-    const response = await axios.get('/src/data/products.json');
+    const response = await axios.get('./src/data/products.json');
     return response.data;
 });
 

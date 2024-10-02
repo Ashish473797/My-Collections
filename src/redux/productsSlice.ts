@@ -22,7 +22,7 @@ const initialState: ProductsState = {
 };
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-    const response = await axios.get('./src/data/products.json');
+    const response = await axios.get('https://run.mocky.io/v3/6584664b-b190-46fa-9621-9efea3212f9e');
     return response.data;
 });
 

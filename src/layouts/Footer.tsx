@@ -15,8 +15,8 @@ export default function Footer() {
           <div>
             <p className="mb-2">Sign up for sale, new arrivals & more</p>
             <div className="bg-white border border-gray-500 p-1 flex w-[98%] xl:w-[75%]">
-              <input className="text-sm px-2 py-2 rounded-full grow text-black focus:outline-none font-medium max-sm:w-full" type="text" placeholder="Email Address" />
-              <Button className="px-6 text-sm">Sign Up</Button>
+              <input className="text-sm px-2 py-2 rounded-full w-full text-black focus:outline-none font-medium max-sm:w-full" type="text" placeholder="Email Address" />
+              <Button className="text-sm text-nowrap px-4 lg:px-6">Sign Up</Button>
             </div>
           </div>
         </div>

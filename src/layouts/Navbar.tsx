@@ -14,7 +14,7 @@ export default function Navbar() {
           Contact Us
         </NavLink>
       </div>
-      <div className="flex">
+      <div className="flex gap-2">
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">

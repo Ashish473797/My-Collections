@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Lenia Walnut Console",
+        "image": "https://ecomposer-awesome-library.myshopify.com/cdn/shop/files/fr-1_533x.jpg?v=1704247033",
+        "costPrice": 215,
+        "sellingPrice": 215
+    },
+    {
+        "id": 2,
+        "name": "Bouclé Oak Dining Chair",
+        "image": "https://ecomposer-awesome-library.myshopify.com/cdn/shop/files/fr-2_533x.jpg?v=1704247006",
+        "costPrice": 215,
+        "sellingPrice": 215
+    },
+    {
+        "id": 3,
+        "name": "Sven Charme Tan Chair",
+        "image": "https://ecomposer-awesome-library.myshopify.com/cdn/shop/files/fr-3_533x.jpg?v=1704246982",
+        "costPrice": 135,
+        "sellingPrice": 135
+    },
+    {
+        "id": 4,
+        "name": "Gabriola Ivory Bouclé Bench",
+        "image": "https://ecomposer-awesome-library.myshopify.com/cdn/shop/files/fr-4_533x.jpg?v=1704246957",
+        "costPrice": 170,
+        "sellingPrice": 155
+    },
+    {
+        "id": 5,
+        "name": "Sablon Sisal Beige Pillow Set",
+        "image": "https://ecomposer-awesome-library.myshopify.com/cdn/shop/files/fr-5_533x.jpg?v=1704246923",
+        "costPrice": 155,
+        "sellingPrice": 155
+    },
+    {
+        "id": 6,
+        "name": "Atra Concrete Round Cafe Table",
+        "image": "https://ecomposer-awesome-library.myshopify.com/cdn/shop/files/fr-6_533x.jpg?v=1704246798",
+        "costPrice": 209,
+        "sellingPrice": 165
+    },
+    {
+        "id": 7,
+        "name": "Solina White Terrazzo Stool",
+        "image": "https://ecomposer-awesome-library.myshopify.com/cdn/shop/files/fr-7_533x.jpg?v=1704246775",
+        "costPrice": 145,
+        "sellingPrice": 145
+    },
+    {
+        "id": 8,
+        "name": "Zola Volcanic Gray Dining Chair",
+        "image": "https://ecomposer-awesome-library.myshopify.com/cdn/shop/files/fr-8_533x.jpg?v=1704246758",
+        "costPrice": 139,
+        "sellingPrice": 139
+    },
+    {
+        "id": 9,
+        "name": "Madera Oak 71 Desk",
+        "image": "https://ecomposer-awesome-library.myshopify.com/cdn/shop/files/fr-9_533x.jpg?v=1704246729",
+        "costPrice": 139,
+        "sellingPrice": 139
+    },
+    {
+        "id": 10,
+        "name": "Dako Oak Cabinet",
+        "image": "https://ecomposer-awesome-library.myshopify.com/cdn/shop/files/fr-10_533x.jpg?v=1704246693",
+        "costPrice": 158,
+        "sellingPrice": 158
+    },
+    {
+        "id": 11,
+        "name": "Vireo Oak Drawer Nightstand",
+        "image": "https://ecomposer-awesome-library.myshopify.com/cdn/shop/files/fr-15-2_533x.jpg?v=1704250478",
+        "costPrice": 315,
+        "sellingPrice": 315
+    },
+    {
+        "id": 12,
+        "name": "Maris White Marble Clock",
+        "image": "https://ecomposer-awesome-library.myshopify.com/cdn/shop/files/fr-11_533x.jpg?v=1704246450",
+        "costPrice": 58,
+        "sellingPrice": 58
+    }
+]

@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+.active{
+    font-weight: 500;
+    color: #D3AC87;
+}
+
+@media screen and (min-width: 1024px) {
+    .col-2 {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .col-4 {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+    .col-6 {
+        grid-template-columns: repeat(6, 1fr) !important;
+    }
+}

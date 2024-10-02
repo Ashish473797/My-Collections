@@ -27,7 +27,7 @@ export default function ContactUs() {
             <p className="text-sm md:text-base lg:font-medium">Let us know how we may help you?</p>
             <div className="bg-white p-1 w-[90%] lg:w-[40%] rounded-full flex mt-16">
               <input className="text-base px-4 py-2 lg:py-4 rounded-full grow text-black focus:outline-none font-medium max-sm:w-full" type="text" placeholder="Search for answer..." />
-              <Button className="rounded-full px-6 lg:px-12">Search</Button>
+              <Button className="text-sm lg:text-base rounded-full px-6 lg:px-12">Search</Button>
             </div>
         </div>
         <div className="absolute w-full lg:flex gap-6 justify-center translate-y-[-25%] lg:translate-y-[-50%] p-4">

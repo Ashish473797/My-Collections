@@ -6,11 +6,11 @@ export default function QueryCard({icon, title, linkText, rightBorder=true}: {ic
     style={rightBorder ? {} : {border: "none"}}>
       <img
         src={icon}
-        className="w-[60px]"
+        className="w-[48px] lg:w-[60px]"
         alt="icon"
       />
-      <h3 className="text-2xl font-semibold">{title}</h3>
-      <Link to="/" className="text-xl underline font-medium max-lg:mb-8">
+      <h3 className="text-xl lg:text-2xl font-semibold">{title}</h3>
+      <Link to="/" className="lg:text-xl underline font-medium max-lg:mb-8">
         {linkText}
       </Link>
     </div>

@@ -19,14 +19,14 @@ export default function FAQAccordion({ faqs }: FAQProps) {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="accordion__title text-3xl font-bold text-center mb-14 text-gray-800">
+      <h1 className="accordion__title text-2xl lg:text-3xl font-bold text-center mb-8 lg:mb-14 text-gray-800">
         Popular Searched Questions
       </h1>
-      <div className="accordion__wrapper bg-white rounded-3xl pt-8 w-full">
+      <div className="accordion__wrapper bg-white rounded-3xl pt-6 lg:pt-8 w-full">
         {faqs.map((faq, index) => (
           <div
             key={faq.id}
-            className={`accordion pr-10 pl-10 pb-8 mb-6 w-full ${
+            className={`accordion pr-4 lg:pr-10 pl-4 lg:pl-10 pb-6 lg:pb-8 mb-6 w-full ${
               index !== faqs.length - 1 ? "border-b border-gray-300" : ""
             }`}
           >
@@ -34,7 +34,7 @@ export default function FAQAccordion({ faqs }: FAQProps) {
               className="accordion__header flex justify-between items-center cursor-pointer w-full"
               onClick={() => toggleFAQ(faq.id)}
             >
-              <h2 className="accordion__question text-xl font-medium w-full text-gray-500">
+              <h2 className="accordion__question text-lg lg:text-xl font-medium w-full text-gray-500">
                 {faq.question}
               </h2>
               <span
@@ -68,7 +68,7 @@ export default function FAQAccordion({ faqs }: FAQProps) {
                 height: openFAQ === faq.id ? "auto" : "0px",
               }}
             >
-              <p className="accordion__answer py-4">{faq.answer}</p>
+              <p className="accordion__answer py-4 text-sm lg:text-base">{faq.answer}</p>
             </div>
           </div>
         ))}

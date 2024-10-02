@@ -37,8 +37,8 @@ export default function ContactUs() {
       </div>
 
       {/* help desk cards  */}
-      <div className="py-12">
-        <h2 className="text-center text-3xl font-semibold mb-12">Browse our help desk</h2>
+      <div className="py-8 lg:py-12">
+        <h2 className="text-center text-2xl lg:text-3xl font-semibold mb-8 lg:mb-12">Browse our help desk</h2>
         <div className="container p-4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
           <HelpDeskCard icon="https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-TSKqG0pC2uic-hp-1.png?v=1724407135" title="Size Guide" description="Ensure your customers get the right fit" linkText="View More"/>
           <HelpDeskCard icon="https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-TSKqG0pC2uic-hp-1.png?v=1724407135" title="Size Guide" description="Ensure your customers get the right fit" linkText="View More"/>
@@ -51,14 +51,14 @@ export default function ContactUs() {
 
 
       {/* Faq  */}
-      <div className="bg-[#E0E0FF] py-16 mt-8">
+      <div className="bg-[#E0E0FF] py-10 lg:py-16 mt-4 lg:mt-8">
         <FAQAccordion faqs={faqs}/>
       </div>
 
       {/* query  */}
       <div className="container mx-auto my-24 px-4">
-          <h2 className="text-center text-3xl font-semibold mb-4">Any other questions?</h2>
-          <p className="text-center font-medium text-gray-700 mb-16">We’re here to help. You can contact us: Weekdays: 6am to 6pm PT, Weekends: 6am to 6pm PT.</p>
+          <h2 className="text-center text-2xl lg:text-3xl font-semibold mb-4">Any other questions?</h2>
+          <p className="text-sm lg:text-base text-center font-medium text-gray-700 mb-16">We’re here to help. You can contact us: Weekdays: 6am to 6pm PT, Weekends: 6am to 6pm PT.</p>
           <div className="border border-gray-300 lg:mx-32 rounded-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
             <QueryCard icon="https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-YGrRM9IVGXicon-lc-1.png?v=1724638892" title="Call" linkText="Contact Us" />
             <QueryCard icon="https://cdn.shopify.com/s/files/1/0726/1221/7115/files/ecom-no-replace-YGrRM9IVGXicon-lc-1.png?v=1724638892" title="Call" linkText="Contact Us" />

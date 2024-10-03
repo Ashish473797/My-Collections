@@ -3,12 +3,12 @@ import { Link, NavLink } from "react-router-dom";
 import { siteData, navLinks } from "../utils/constants";
 import Button from "../components/Button/Button";
 import { RootState } from "../redux/store";
-import { selectAllCartItems, selectCartTotal } from "../redux/selectors";
+import { selectCartTotal } from "../redux/selectors";
 import { useSelector } from "react-redux";
 
 export default function Navbar() {
 
-  const cartItems = useSelector((state: RootState) => selectAllCartItems(state));
+  const cartItems = useSelector((state: RootState) => state.cartData.items);
   const total = useSelector((state: RootState) => selectCartTotal(state));
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);

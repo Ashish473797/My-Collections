@@ -6,12 +6,15 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts, Product } from "../../../redux/productsSlice";
 import { addToCart } from "../../../redux/cartSlice";
+import { Range } from "react-range";
+import { FiX } from "react-icons/fi"; // Cross button icon
 
 export default function CollectionProducts() {
-
   const [gridColumn, setGridColumn] = useState(4);
   const [visibleProducts, setVisibleProducts] = useState(12);
   const [sortOption, setSortOption] = useState<string | undefined>("");
+  const [priceRange, setPriceRange] = useState([50, 500]);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const dispatch: AppDispatch = useDispatch();
 
@@ -23,7 +26,6 @@ export default function CollectionProducts() {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-  
   const showMoreProducts = () => {
     setVisibleProducts((prevVisible) => prevVisible + 4);
   };
@@ -48,16 +50,90 @@ export default function CollectionProducts() {
     }
   };
 
+  const handleFilterByPrice = (products: Product[]) => {
+    return products.filter(
+      (product) =>
+        product.sellingPrice >= priceRange[0] &&
+        product.sellingPrice <= priceRange[1]
+    );
+  };
+
   const sortedProducts = handleSort(products);
-  const displayedProducts = sortedProducts.slice(0, visibleProducts);
+  const filteredProducts = handleFilterByPrice(sortedProducts);
+  const displayedProducts = filteredProducts.slice(0, visibleProducts);
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+    document.body.style.overflow = drawerOpen ? "auto" : "hidden";
+  };
 
   return (
     <div className="container mx-auto px-4 md:px-24 mb-24">
+      {/* Drawer overlay and container */}
+      {drawerOpen && (
+        <div className="fixed inset-0 z-40 bg-black bg-opacity-50" onClick={toggleDrawer}></div>
+      )}
+      <div
+        className={`fixed top-0 left-0 z-50 w-80 bg-white h-full shadow-lg transform ${
+          drawerOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out`}
+      >
+        <div className="p-4 flex justify-between items-center">
+          <h3 className="text-lg font-semibold">Filter</h3>
+          <button onClick={toggleDrawer} className="text-2xl">
+            <FiX />
+          </button>
+        </div>
+
+        {/* Price Range Selector */}
+        <div className="p-4">
+          <h4 className="mb-4">Price Range</h4>
+          <Range
+            step={10}
+            min={50}
+            max={500}
+            values={priceRange}
+            onChange={(values) => setPriceRange(values)}
+            renderTrack={({ props, children }) => (
+              <div {...props} className="w-full h-2 bg-gray-300 rounded">
+                {children}
+              </div>
+            )}
+            renderThumb={({ props }) => (
+              <div
+                {...props}
+                className="w-4 h-4 bg-blue-500 rounded-full focus:outline-none"
+              />
+            )}
+          />
+          <div className="mt-4 flex justify-between">
+            <input
+              type="number"
+              value={priceRange[0]}
+              onChange={(e) =>
+                setPriceRange([+e.target.value, priceRange[1]])
+              }
+              className="w-20 p-2 border border-gray-300 rounded"
+            />
+            <input
+              type="number"
+              value={priceRange[1]}
+              onChange={(e) =>
+                setPriceRange([priceRange[0], +e.target.value])
+              }
+              className="w-20 p-2 border border-gray-300 rounded"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* filters */}
       <div className="grid grid-cols-2 lg:grid-cols-3 justify-between my-12">
-        
         {/* Filter Section */}
-        <div className="text-xl flex items-center gap-1 text-black cursor-pointer">
+        <div
+          className="text-xl flex items-center gap-1 text-black cursor-pointer"
+          onClick={toggleDrawer}
+        >
           <HiOutlineAdjustmentsVertical />
           <p className="text-sm md:text-base">Filter</p>
         </div>
@@ -146,7 +222,7 @@ export default function CollectionProducts() {
       </div>
 
       {/* Show more products button */}
-      {visibleProducts < products.length && (
+      {visibleProducts < filteredProducts.length && (
         <div className="flex justify-center mt-16">
           <Button
             className="text-sm lg:text-base py-2 lg:py-3 px-5 lg:px-7"

@@ -1,7 +1,14 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { siteData, navLinks } from "../utils/constants";
+import Button from "../components/Button/Button";
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div className="navbar bg-base-100 shadow">
@@ -49,7 +56,12 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-        <button className="btn btn-square btn-ghost md:hidden">
+
+        {/* Hamburger menu for mobile */}
+        <button
+          className="btn btn-square btn-ghost md:hidden"
+          onClick={toggleMenu}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -65,6 +77,42 @@ export default function Navbar() {
           </svg>
         </button>
       </div>
+
+      {/* Mobile Menu Toggle */}
+      {isMenuOpen && (
+        <div className="md:hidden fixed inset-0 flex flex-col justify-center items-center h-[100vh] bg-white z-10">
+          <button
+            className="absolute top-4 right-4 btn btn-square btn-ghost"
+            onClick={toggleMenu}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="inline-block h-6 w-6 stroke-current"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <div className="flex flex-col gap-4 items-center">
+            <Link to="/collections" onClick={toggleMenu}>
+              <Button className="hover:scale-105 transition-all py-3 px-8 border border-gray-500">
+                Collection Page
+              </Button>
+            </Link>
+            <Link to="/contact-us" onClick={toggleMenu}>
+              <Button className="hover:scale-105 transition-all py-3 px-8 border border-gray-500">
+                ContactUs Page
+              </Button>
+            </Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

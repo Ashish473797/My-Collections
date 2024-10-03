@@ -1,14 +1,5 @@
 import { useState } from "react";
-
-interface FAQ {
-  id: number;
-  question: string;
-  answer: string;
-}
-
-interface FAQProps {
-  faqs: FAQ[];
-}
+import { FAQProps } from "../../utils/types";
 
 export default function FAQAccordion({ faqs }: FAQProps) {
   const [openFAQ, setOpenFAQ] = useState<number | null>(1);

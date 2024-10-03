@@ -1,14 +1,4 @@
-import { ReactNode } from "react";
-
-interface ButtonProps {
-  children: ReactNode;
-  type?: "button" | "submit" | "reset";
-  variant?: "primary" | "secondary" | "default";
-  onClick?: () => void;
-  className?: string;
-  disabled?: boolean;
-  value?: string;
-}
+import { ButtonProps } from "../../utils/types";
 
 function Button({
   children,

@@ -8,6 +8,7 @@ type ProductCardProp = {
   image: string;
   costPrice: number;
   sellingPrice: number;
+  onClick: React.MouseEventHandler<HTMLParagraphElement> | undefined;
 };
 
 export default function ProductCard({
@@ -15,6 +16,7 @@ export default function ProductCard({
   image,
   costPrice,
   sellingPrice,
+  onClick,
 }: ProductCardProp) {
 
   const discountPercent = discountInPercent(costPrice, sellingPrice);
@@ -33,7 +35,7 @@ export default function ProductCard({
       <div className="flex justify-between items-center font-semibold text-black mb-3">
         <div className="flex gap-2 cursor-pointer hover:text-gray-500">
           <GrCart />
-          <p className="text-base">Add to cart</p>
+          <p className="text-base" onClick={onClick}>Add to cart</p>
         </div>
         <div className="flex gap-1 text-base">
           <MdFavoriteBorder className="cursor-pointer  hover:text-gray-500" />

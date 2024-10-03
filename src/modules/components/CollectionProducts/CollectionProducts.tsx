@@ -5,6 +5,7 @@ import { AppDispatch, RootState } from "../../../redux/store";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../../redux/productsSlice";
+import { addToCart } from "../../../redux/cartSlice";
 
 export default function CollectionProducts() {
   const [gridColunm, setGridColunm] = useState(4);
@@ -215,6 +216,7 @@ export default function CollectionProducts() {
             image={product.image}
             costPrice={product.costPrice}
             sellingPrice={product.sellingPrice}
+            onClick={() => dispatch(addToCart(product))}
           />
         ))}
       </div>

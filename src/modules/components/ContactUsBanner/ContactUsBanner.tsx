@@ -6,7 +6,7 @@ import { trackExchangeData } from "../../../utils/constants";
 export default function ContactUsBanner() {
   return (
     <div
-      className="h-[60vh] mb-40 max-lg:mb-[360px]"
+      className="h-[64vh] mb-40 max-lg:mb-[360px]"
       style={{
         backgroundImage: `url(${contactBanner})`,
         backgroundSize: "cover",
@@ -14,7 +14,7 @@ export default function ContactUsBanner() {
       }}
     >
       <div className="h-full backdrop-blur-md flex flex-col gap-2 items-center text-white">
-        <h1 className="text-3xl lg:text-5xl font-semibold mt-28">
+        <h1 className="text-3xl lg:text-5xl font-semibold mt-24">
           HELP CENTER
         </h1>
         <p className="text-sm md:text-base lg:font-medium">

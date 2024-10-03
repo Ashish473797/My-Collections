@@ -44,10 +44,10 @@ export default function CollectionProducts() {
             }}
           >
             <div className="grid grid-cols-2 gap-1 p-2 cursor-pointer">
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 2 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 2 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 2 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 2 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
             </div>
           </div>
 
@@ -59,14 +59,14 @@ export default function CollectionProducts() {
             }}
           >
             <div className="grid grid-cols-4 gap-1 p-2 cursor-pointer">
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 4 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 4 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 4 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 4 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 4 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 4 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 4 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 4 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
             </div>
           </div>
 
@@ -78,18 +78,18 @@ export default function CollectionProducts() {
             }}
           >
             <div className="grid grid-cols-6 gap-1 p-2 cursor-pointer">
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
-              <div className="w-2 h-[6px] bg-gray-400 group-hover:bg-gray-500 transition duration-200"></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 6 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 6 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 6 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 6 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 6 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 6 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 6 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 6 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 6 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 6 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 6 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
+              <div className={`w-2 h-[6px] ${gridColunm === 6 ? "bg-gray-500" : "bg-gray-400"} group-hover:bg-gray-500 transition duration-200`}></div>
             </div>
           </div>
         </div>

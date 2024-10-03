@@ -11,6 +11,14 @@
     color: #D3AC87;
 }
 
+.bg-gray-400{
+    background-color: #9ca3af !important;
+}
+
+.bg-gray-500{
+    background-color: #6b7280 !important;
+}
+
 @media screen and (min-width: 1024px) {
     .col-2 {
       grid-template-columns: repeat(2, 1fr) !important;

@@ -1,18 +1,19 @@
 import { Link, NavLink } from "react-router-dom";
+import { siteData, navLinks } from "../utils/constants";
 
 export default function Navbar() {
+
   return (
     <div className="navbar bg-base-100 shadow">
       <div className="flex-1 space-x-4">
         <Link to="/" className="btn btn-ghost text-xl">
-          My Collections
+          {siteData.siteName}
         </Link>
-        <NavLink to="/collections" className="hidden md:block">
-          Collections
-        </NavLink>
-        <NavLink to="/contact-us" className="hidden md:block">
-          Contact Us
-        </NavLink>
+        {navLinks.map((link) => (
+          <NavLink key={link.id} to={link.path} className="hidden md:block">
+            {link.title}
+          </NavLink>
+        ))}
       </div>
       <div className="flex gap-2">
         <div className="dropdown dropdown-end">
@@ -49,20 +50,20 @@ export default function Navbar() {
           </div>
         </div>
         <button className="btn btn-square btn-ghost md:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="inline-block h-5 w-5 stroke-current"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            className="inline-block h-5 w-5 stroke-current"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
       </div>
     </div>
   );

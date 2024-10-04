@@ -4,11 +4,12 @@ import Button from "../../../components/Button/Button";
 import { AppDispatch, RootState } from "../../../redux/store";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts} from "../../../redux/productsSlice";
+import { fetchProducts } from "../../../redux/productsSlice";
 import { addToCart } from "../../../redux/cartSlice";
 import { Range } from "react-range";
 import { FiX } from "react-icons/fi";
 import { Product } from "../../../utils/types";
+import { ClipLoader } from "react-spinners";
 
 export default function CollectionProducts() {
   const [gridColumn, setGridColumn] = useState(4);
@@ -19,13 +20,21 @@ export default function CollectionProducts() {
 
   const dispatch: AppDispatch = useDispatch();
 
-  const products = useSelector(
-    (state: RootState) => state.productsData.products
+  const { products, loading } = useSelector(
+    (state: RootState) => state.productsData
   );
 
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
+
+  if (loading) {
+    return (
+      <div className="flex h-[40vh] items-center justify-center">
+        <ClipLoader size={80}/>
+      </div>
+    )
+  }
 
   const showMoreProducts = () => {
     setVisibleProducts((prevVisible) => prevVisible + 4);
@@ -72,7 +81,10 @@ export default function CollectionProducts() {
     <div className="container mx-auto px-4 md:px-24 mb-24">
       {/* Drawer overlay and container */}
       {drawerOpen && (
-        <div className="fixed inset-0 z-40 bg-black bg-opacity-50" onClick={toggleDrawer}></div>
+        <div
+          className="fixed inset-0 z-40 bg-black bg-opacity-50"
+          onClick={toggleDrawer}
+        ></div>
       )}
       <div
         className={`fixed top-0 left-0 z-50 w-80 bg-white h-full shadow-lg transform ${
@@ -111,17 +123,13 @@ export default function CollectionProducts() {
             <input
               type="number"
               value={priceRange[0]}
-              onChange={(e) =>
-                setPriceRange([+e.target.value, priceRange[1]])
-              }
+              onChange={(e) => setPriceRange([+e.target.value, priceRange[1]])}
               className="w-20 p-2 border border-gray-300 rounded"
             />
             <input
               type="number"
               value={priceRange[1]}
-              onChange={(e) =>
-                setPriceRange([priceRange[0], +e.target.value])
-              }
+              onChange={(e) => setPriceRange([priceRange[0], +e.target.value])}
               className="w-20 p-2 border border-gray-300 rounded"
             />
           </div>

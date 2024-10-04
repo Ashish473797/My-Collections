@@ -11,7 +11,7 @@ export default function QuerySection() {
       We’re here to help. You can contact us: Weekdays: 6am to 6pm PT,
       Weekends: 6am to 6pm PT.
     </p>
-    <div className="border border-gray-300 lg:mx-32 rounded-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
+    <div data-aos="fade-up" className="border border-gray-300 lg:mx-32 rounded-3xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
       {queryCardData.map((data, index) => (
         <QueryCard
           key={data.id}

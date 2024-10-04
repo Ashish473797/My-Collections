@@ -13,7 +13,7 @@ export default function FAQAccordion({ faqs }: FAQProps) {
       <h1 className="accordion__title text-2xl lg:text-3xl font-bold text-center mb-8 lg:mb-14 text-gray-800">
         Popular Searched Questions
       </h1>
-      <div className="accordion__wrapper bg-white rounded-3xl pt-6 lg:pt-8 w-full">
+      <div data-aos="fade-up" className="accordion__wrapper bg-white rounded-3xl pt-6 lg:pt-8 w-full">
         {faqs.map((faq, index) => (
           <div
             key={faq.id}

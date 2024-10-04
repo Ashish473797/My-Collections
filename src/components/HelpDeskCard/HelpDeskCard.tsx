@@ -12,7 +12,7 @@ export default function HelpDeskCard({
   linkText: string;
 }) {
   return (
-    <div className="bg-[#F4F4FF] py-4 md:py-6 lg:py-10 px-3 md:px-8 lg:px-12 rounded-lg flex flex-col gap-4">
+    <div data-aos="fade-up" className="bg-[#F4F4FF] py-4 md:py-6 lg:py-10 px-3 md:px-8 lg:px-12 rounded-lg flex flex-col gap-4">
       <img src={icon} className="w-[64px] cursor-pointer" alt="icon" />
       <div>
         <h2 className="text-xl lg:text-2xl font-semibold mb-2">{title}</h2>

@@ -4,6 +4,7 @@ import TrackExchangeCard from "../../../components/TrackExchangeCard/TrackExchan
 import { trackExchangeData } from "../../../utils/constants";
 
 export default function ContactUsBanner() {
+
   return (
     <div
       className="h-[64vh] mb-40 max-lg:mb-[360px]"
@@ -14,13 +15,13 @@ export default function ContactUsBanner() {
       }}
     >
       <div className="h-full backdrop-blur-md flex flex-col gap-2 items-center text-white">
-        <h1 className="text-3xl lg:text-5xl font-semibold mt-24">
+        <h1 data-aos="fade-up" className="text-3xl lg:text-5xl font-semibold mt-24">
           HELP CENTER
         </h1>
-        <p className="text-sm md:text-base lg:font-medium">
+        <p data-aos="fade-up" className="text-sm md:text-base lg:font-medium">
           Let us know how we may help you?
         </p>
-        <div className="bg-white p-1 w-[90%] lg:w-[40%] rounded-full flex mt-16">
+        <div data-aos="fade-up" className="bg-white p-1 w-[90%] lg:w-[40%] rounded-full flex mt-16">
           <input
             className="text-base px-4 py-2 lg:py-4 rounded-full grow text-black focus:outline-none font-medium max-sm:w-full"
             type="text"

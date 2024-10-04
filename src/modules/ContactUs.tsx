@@ -12,7 +12,7 @@ export default function ContactUs() {
     AOS.init({
       duration: 600,
       easing: 'ease-in-out',
-      offset: 160,
+      offset: 140,
       once: false,
     });
   }, []);

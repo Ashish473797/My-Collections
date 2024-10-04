@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts} from "../../../redux/productsSlice";
 import { addToCart } from "../../../redux/cartSlice";
 import { Range } from "react-range";
-import { FiX } from "react-icons/fi"; // Cross button icon
+import { FiX } from "react-icons/fi";
 import { Product } from "../../../utils/types";
 
 export default function CollectionProducts() {

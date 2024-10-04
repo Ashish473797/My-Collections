@@ -29,7 +29,7 @@ export default function Navbar() {
           </NavLink>
         ))}
       </div>
-      <div className="flex gap-2">
+      <div className="flex gap-1">
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
             <div className="indicator">

@@ -4,10 +4,11 @@ import Button from "../../../components/Button/Button";
 import { AppDispatch, RootState } from "../../../redux/store";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts, Product } from "../../../redux/productsSlice";
+import { fetchProducts} from "../../../redux/productsSlice";
 import { addToCart } from "../../../redux/cartSlice";
 import { Range } from "react-range";
 import { FiX } from "react-icons/fi"; // Cross button icon
+import { Product } from "../../../utils/types";
 
 export default function CollectionProducts() {
   const [gridColumn, setGridColumn] = useState(4);
